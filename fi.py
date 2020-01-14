@@ -4,15 +4,13 @@ import math
 
 def main():
 
-    lower_limit = -3
-    upper_limit = 3
+    lower_limit = -10000
+    upper_limit = 10000
 
-    dx = 10**(-3)
-
-    number_of_itterations = dx/(upper_limit-lower_limit)
+    dx = 10**(-5)
 
     integral = 0
     itteration = math.ceil((upper_limit - lower_limit)/dx)
-    integral = engine.run(integral,dx,upper_limit,lower_limit)
+    integral = engine.run(integral,itteration,lower_limit,dx)
 
     pprint("the value of the integral is: " + str(integral))
