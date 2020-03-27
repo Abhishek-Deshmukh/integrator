@@ -1,14 +1,17 @@
 from numba import jit
 import math
 
-def function(x):
-    return (math.sin(x)/x)
 
 @jit(nopython=True)
-def run(integral,itteration,lower_limit,dx):
-    for p in range(1,itteration):
+def run(integral, itteration, lower_limit, dx):
+    for p in range(1, itteration):
         try:
-            integral = integral + (math.sin(lower_limit + p*dx)/(lower_limit + p*dx))*dx
+            x = lower_limit + p * dx
+            # enter you function here
+            function_at_x = math.sin(x) / x
+
+            # do not touch if you don't know what you are doing
+            integral = integral + function_at_x * dx
         except:
-            pass
+            print("didn't work")
     return integral
