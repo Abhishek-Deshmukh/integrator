@@ -1,4 +1,3 @@
-from pprint import pprint
 import engine
 import math
 
@@ -13,7 +12,7 @@ def main():
     itteration = math.ceil((upper_limit - lower_limit) / dx)
     integral = engine.run(0, itteration, lower_limit, dx)
 
-    pprint("the value of the integral is: " + str(integral))
+    print("the value of the integral is: " + str(integral))
 
 
 def test():
@@ -26,7 +25,7 @@ def test():
     itteration = math.ceil((upper_limit - lower_limit) / dx)
     integral = engine.run(0, itteration, lower_limit, dx)
 
-    pprint("the value of the integral is: " + str(integral))
+    print("the value of the integral is: " + str(integral))
 
 
 main()
